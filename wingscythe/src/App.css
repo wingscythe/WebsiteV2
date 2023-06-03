@@ -1,38 +1,81 @@
-.App {
+html, body {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body{
+  /* Background pattern from transparenttextures.com, which uses Toptal Subtle Patterns*/
+  background: url(imgs/shattered-dark.png), linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%) center center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+  font-family: 'Exo', sans-serif; 
+  /* font-size: 1vmin; */
+}
+
+.textCentered{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*Center Block -----------------------------------------------------------------------------------------------------------------*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.aligner{
+  height: 90vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#wrapper{
+  align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.centgn{
+  font-size: 14vmin;
+  margin: 0;
+  padding: 0;
+}
+
+.centgd{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 5vmin;
+}
+
+.destylea{
+  display: inline-block;
+  padding: 8px;
+  text-decoration: none;
+  color:white;
+}
+
+/*media specific options ---------------------------------------------------------------------------------------------------*/
+@media(max-width:783px){
+  /*Overlay*/
+  #overlogo{
+      height: 244px;
+      width: 300px;
+      background: url(WingScythe%20Icon%20Base_edited.png); 
+      background-size: contain;
+      display: inline-block;
   }
-  to {
-    transform: rotate(360deg);
+  
+  #navbar{
+      position: fixed;
+      top: 0;
+      right: -330px;
+      font-size: 13px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      transition: 0.3s;
+      z-index: 2;
+  }
+  
+  .centgn{
+      padding-top: 13vh;
+      text-align: center;
+      font-size: 50px;
   }
 }
