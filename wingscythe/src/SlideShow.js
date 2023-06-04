@@ -1,20 +1,9 @@
 import { useState } from "react";
+import "./SlideShow.css";
 
 export function SlideShow({slides}) {
 
     const [ currentIndex, SetCurrentIndex ] = useState(0);
-
-    const slideContainerStyle = {
-        height: "1000px",
-        width: "1000px",
-        position: "relative"
-    };
-
-    const slideStyle = {
-        height: "100%", 
-        width: "100%",
-        backgroundImage: `url(${slides[currentIndex]})`
-    };
 
     function PrevSlide() {
         const onFirstSlide = currentIndex === 0;
@@ -33,16 +22,18 @@ export function SlideShow({slides}) {
     }
 
     return (
-        <div className = "slideshow-container" style = {slideContainerStyle}>
-            <div className = "slideshow-inner" style = {slideStyle}></div>
-            <div className = "prev" onClick = {PrevSlide}>&#10094;</div>
-            <div className = "next" onClick = {NextSlide}>&#10095;</div>
-            <div className = "dots-container">
-                {slides.map((slide, slideIndex) => (
-                    <div key={slideIndex} onClick = {() => GoToSlide(slideIndex)}>
-                        ●
-                    </div>
-                ))}
+        <div className = "slideshow-container">
+            <div className = "slide">
+                {slides[currentIndex]}
+            </div>
+            <div className = "controls">
+                <div className = "prev" onClick = {PrevSlide}>&#9664;</div>
+                <div className = "dots-container">
+                    {slides.map((slide, slideIndex) => (
+                        <div className = "dots" key={slideIndex} onClick = {() => GoToSlide(slideIndex)}></div>
+                    ))}
+                </div>
+                <div className = "next" onClick = {NextSlide}>&#9654;</div>
             </div>
         </div>
     );
