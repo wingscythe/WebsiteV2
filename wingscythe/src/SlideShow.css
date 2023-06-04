@@ -1,0 +1,105 @@
+.slideshow-container {
+    height: 600px;
+    width: 100%;
+    background-color: #4B4B4B;
+    position: relative;
+}
+
+.slide {
+    height: 90%; 
+    width: 100%;
+}
+
+.controls {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    margin: auto;
+}
+
+.prev, .next, .dots-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.prev, .next { 
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.dots-container {
+    margin: 0 10px;
+}
+
+.dots {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 10px;
+    background-color: #8ED6DB;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active .dots:hover {
+    background-color: #717171;
+}
+
+.slide-content {
+    height: 100%;
+    width: 100%;
+}
+
+.image-container {
+    float: left;
+    height: 100%;
+    width: 70%;
+}
+
+.detail-container {
+    float: left;
+    height: 100%;
+    width: 30%;
+}
+
+.project-container {
+    height: 65%;
+}
+
+.github-container {
+    height: 35%;
+}
+
+.project-title {
+    height: 10%;
+}
+.project-description {
+    background-color: #D9D9D9;
+    height: 90%;
+}
+
+.github-source {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 50%;
+}
+
+.project-title, .github-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 2% 5%;
+}
+
+.project-description, .github-source {
+    margin: 0 5%;
+}
+
+.project-title, .project-description, .github-title, .github-source {
+    color: #fff;
+}
