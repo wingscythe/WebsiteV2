@@ -38,3 +38,39 @@ export function SlideShow({slides}) {
         </div>
     );
 }
+
+export function Slide({content}) {
+    const slideImage = {
+        height: "90%",
+        width: "90%",
+        margin: "auto",
+        marginTop: "2%",
+        backgroundImage: `url(${content.image})`
+    }
+
+    return (
+    <div className = "slide-content">
+        <div className = "image-container">
+            <div className = "project-image" style = {slideImage}></div>        
+        </div>
+        <div className = "detail-container">
+            <div className = "project-container">
+                <div className = "project-title">
+                    {content.projectName}
+                </div>
+                <div className = "project-description">
+                    {content.projectDescription}
+                </div>
+            </div>
+            <div className = "github-container"> 
+                <div className = "github-title">
+                    Github
+                </div>
+                <div className = "github-source">
+                    {content.github}
+                </div>
+            </div>
+        </div>
+    </div>
+    );
+}
