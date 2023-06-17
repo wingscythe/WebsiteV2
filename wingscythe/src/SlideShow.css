@@ -1,3 +1,10 @@
+.slideshow-wrapper{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .slideshow-container {
     height: 600px;
     width: 100%;

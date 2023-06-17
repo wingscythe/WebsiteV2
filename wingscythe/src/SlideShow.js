@@ -22,19 +22,22 @@ export function SlideShow({slides}) {
     }
 
     return (
-        <div className = "slideshow-container">
-            <div className = "slide">
-                {slides[currentIndex]}
-            </div>
-            <div className = "controls">
-                <div className = "prev" onClick = {PrevSlide}>&#9664;</div>
-                <div className = "dots-container">
-                    {slides.map((slide, slideIndex) => (
-                        <div className = "dots" key={slideIndex} onClick = {() => GoToSlide(slideIndex)}></div>
-                    ))}
+        <div className="slideshow-wrapper">
+            <div className = "slideshow-container">
+                <div className = "slide">
+                    {slides[currentIndex]}
                 </div>
-                <div className = "next" onClick = {NextSlide}>&#9654;</div>
+                <div className = "controls">
+                    <div className = "prev" onClick = {PrevSlide}>&#9664;</div>
+                    <div className = "dots-container">
+                        {slides.map((slide, slideIndex) => (
+                            <div className = "dots" key={slideIndex} onClick = {() => GoToSlide(slideIndex)}></div>
+                        ))}
+                    </div>
+                    <div className = "next" onClick = {NextSlide}>&#9654;</div>
+                </div>
             </div>
+
         </div>
     );
 }

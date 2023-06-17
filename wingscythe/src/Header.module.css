@@ -1,0 +1,36 @@
+.container {
+    /* Creates scaling height and allows img and text to be in same row */
+    height: 12vh;
+    display: flex;  
+    align-items: center;
+
+    margin: 0px;
+
+    /* Top and left space */
+    padding-left: 2.1%;
+    padding-top: 0.9%;
+}
+
+.icon {
+    /* Scales icon for container */
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    max-height: 95.2%;
+}
+
+.page {
+    /* Text font */
+    font-family: 'Exo', sans-serif; 
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8vh;
+    color: #FFFFFF;
+
+    order: 2;
+
+    /* Scales text for container */
+    display: block;
+    margin: 0px;
+    max-height: 100%;
+}
