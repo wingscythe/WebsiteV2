@@ -70,7 +70,9 @@ export function Slide({content}) {
                     Github
                 </div>
                 <div className = "github-source">
-                    {content.github}
+                    <a href={content.github}>
+                        <img src= {content.linkCard} width="100%" />
+                    </a>
                 </div>
             </div>
         </div>
