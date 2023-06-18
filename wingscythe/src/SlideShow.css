@@ -18,10 +18,10 @@
 }
 
 .controls {
-    position: absolute;
     height: 10%;
-    width: 100%;
+    width: 50%;
     margin: auto;
+    text-align: center;
 }
 
 .prev, .next, .dots-container {

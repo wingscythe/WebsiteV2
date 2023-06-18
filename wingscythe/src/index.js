@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Projects from './Projects';
+import Team from './Team';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -10,6 +11,7 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
     <Projects />
+    {/* <Team /> */}
   </React.StrictMode>
 );
 

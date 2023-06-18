@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./SlideShow.css";
 
-export function SlideShow({slides}) {
+export function SlideShow({slides, showArrows}) {
 
     const [ currentIndex, SetCurrentIndex ] = useState(0);
 
@@ -18,6 +18,7 @@ export function SlideShow({slides}) {
     }
 
     function GoToSlide(index) {
+        console.log(showArrows);
         SetCurrentIndex(index);
     }
 
@@ -28,16 +29,15 @@ export function SlideShow({slides}) {
                     {slides[currentIndex]}
                 </div>
                 <div className = "controls">
-                    <div className = "prev" onClick = {PrevSlide}>&#9664;</div>
+                    {showArrows === true ? (<div className = "prev" onClick = {PrevSlide}>&#9664;</div>) : null}
                     <div className = "dots-container">
                         {slides.map((slide, slideIndex) => (
                             <div className = "dots" key={slideIndex} onClick = {() => GoToSlide(slideIndex)}></div>
                         ))}
                     </div>
-                    <div className = "next" onClick = {NextSlide}>&#9654;</div>
+                    {showArrows === true ? (<div className = "next" onClick = {NextSlide}>&#9654;</div>): null}
                 </div>
             </div>
-
         </div>
     );
 }
