@@ -1,0 +1,64 @@
+.profile-container, .description-container {
+    display: inline;
+    float: left;
+    margin: auto;
+    height: inherit;
+    width: 50%
+}
+
+.member-image, .member-name, .member-title, .connection-icons {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.member-image {
+    padding-top: 10%;
+}
+
+#profile-image {
+    border-radius: 50%;
+    height: inherit;
+    width: inherit;
+}
+
+.member-name {
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 53px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.member-title {
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 43px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#github-logo, #linkedin-logo {
+    border-radius: 50%;
+    height: 48px;
+    width: 48;
+    margin: 5%;
+}
+
+.description-container {
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 43px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.description {
+    padding-top: 10%;
+}

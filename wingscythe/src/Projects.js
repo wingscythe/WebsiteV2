@@ -25,7 +25,7 @@ function About() {
 
     return (
         <div>
-            <SlideShow slides = {slideImages}/>
+            <SlideShow slides = {slideImages} showArrows = {true} />
         </div>
     );
 }
